@@ -1,7 +1,7 @@
 # knowit
 ingilizcenizi geliştirmenizi yarayan bir terminal uygulaması
 
-[example.webm](https://github.com/user-attachments/assets/871ae93a-880d-4f1b-adc7-855b749698b4)
+[example.webm](https://github.com/user-attachments/assets/567a803c-37e3-4c92-b2d9-795a4e020b0b)
 
 # nasıl çalışır
 - size ingilizce seviyenizi sorar
