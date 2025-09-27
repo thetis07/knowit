@@ -20,15 +20,23 @@ def game():
     os.system("clear")
 
     while True:
-        choosen = random.choice(sentences)
-        answer = sentences_get.get(choosen)
-        print(f"gelen kelime: {choosen}")
-        response = input(": ")
+        try:
+            choosen = random.choice(sentences)
+            answer = sentences_get.get(choosen)
+            print(f"gelen kelime: {choosen}")
+            response = input(": ")
 
-        if response.lower().strip() == answer:
-            print("hll bildin!")
-        elif response.lower().strip() != answer:
-            print(f"bilemedin ez, cevap: {answer}")
-        
-        time.sleep(0.8)
-        os.system("clear")
+            if response.lower().strip() == answer:
+                print("hll bildin!")
+            elif response.lower().strip() != answer:
+                print(f"bilemedin ez, cevap: {answer}")
+            
+            sentences.remove(choosen)
+
+            time.sleep(0.8)
+            os.system("clear")
+
+        except IndexError:
+            print("butun kelimeler bitti.")
+            time.sleep(1)
+            break
