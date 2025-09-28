@@ -24,8 +24,9 @@ def game():
         try:
             choosen = random.choice(sentences)
             answer = sentences_get.get(choosen)
+            print(Style.RESET_ALL, end="")
             print(f"gelen kelime: {Fore.BLUE} {choosen}")
-            response = input(f"{Style.RESET_ALL}: {Fore.RED}")
+            response = input(f"{Style.RESET_ALL}: {Fore.BLUE}")
             print(Style.RESET_ALL, end="")
 
             if response.lower().strip() == answer:
