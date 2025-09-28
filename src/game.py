@@ -2,6 +2,7 @@ import json
 import time
 import random
 import os
+from colorama import Fore, Style
 
 dt = "dictionary.json"
 
@@ -23,13 +24,15 @@ def game():
         try:
             choosen = random.choice(sentences)
             answer = sentences_get.get(choosen)
-            print(f"gelen kelime: {choosen}")
-            response = input(": ")
+            print(f"gelen kelime: {Fore.BLUE} {choosen}")
+            response = input(f"{Style.RESET_ALL}: {Fore.RED}")
+            print(Style.RESET_ALL, end="")
 
             if response.lower().strip() == answer:
                 print("hll bildin!")
             elif response.lower().strip() != answer:
-                print(f"bilemedin ez, cevap: {answer}")
+                print(f"bilemedin ez, cevap: {Fore.GREEN}{answer}")
+                print(Style.RESET_ALL, end="")
             
             sentences.remove(choosen)
 
